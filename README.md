@@ -26,7 +26,7 @@ tar -zxvf qrencode-3.3.1.tar.gz
 
 cd qrencode-3.3.1
 
-./configure make && make && install
+./configure && make && make  install
 
 3.download exqrcode && unzip exqrcode zip file
 
