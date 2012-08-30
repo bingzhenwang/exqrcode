@@ -30,7 +30,11 @@ cd qrencode-3.3.1
 
 3.download exqrcode && unzip exqrcode zip file
 
+phpize
+
 ./configure --with-qrencode --with-png
+
+make && make install
 
 4.add extension=exqrcode.so into php.ini
 
