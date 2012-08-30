@@ -87,6 +87,7 @@ var_dump($instance->writeToFile("/tmp/qrsms.png"));
 ## class and interface
 
 class name : ExQrcode
+
 	setDpi($dpinumber) default is 72
 
 	setSize($size) the dot pixels ,default is 3
