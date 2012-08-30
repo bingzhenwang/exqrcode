@@ -12,17 +12,18 @@ $instance->setSize(7);
 //$instance->setDpi(72);
 $instance->encodeGeneral("hello world");
 var_dump($instance->writeToFile("/tmp/qrgeneral.png"));
-$instance->encodePhone("http://www.baidu.com");
+$instance->encodeUrl("http://www.baidu.com");
 var_dump($instance->writeToFile("/tmp/qrurl.png"));
-$arr = array("N" => "王炳振","TEL" => "1390125","EMAIL" => "email" 
+$arr = array("N" => "name","TEL" => "13900000000","EMAIL" => "email" 
 , "ADDR" => "address" ,"URL" => "http://www.helloworld.com");
 
-//$instance->encodeMECard($arr);
-//var_dump($instance->writeToFile("/tmp/qrmecard.png"));
+$instance->encodeMECard($arr);
+var_dump($instance->writeToFile("/tmp/qrmecard.png"));
 
-$instance->encodePhone("15901380650");
+$instance->encodePhone("13900000000");
 var_dump($instance->writeToFile("/tmp/qrphone.png"));
-$instance->encodeSMS("hello","今天去吃饭");
+
+$instance->encodeSMS("message subject","message content");
 var_dump($instance->writeToFile("/tmp/qrsms.png"));
 //var_dump($instance);
 
